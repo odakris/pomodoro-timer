@@ -1,0 +1,157 @@
+:root {
+  --text-color: #00917a;
+  --background-color1: #00aa8e;
+  --background-color2: #0f6b5c;
+  --color-timer: linen;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#credit {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+  color: var(--color-timer);
+
+  a {
+    font-size: 0.8rem;
+    color: var(--color-timer);
+  }
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    var(--background-color1),
+    var(--background-color2)
+  );
+  height: 100vh;
+  z-index: -1;
+
+  #root {
+    display: block;
+    min-width: 600px;
+    transform: scale(0.8);
+
+    .container {
+      flex-direction: column;
+      height: 750px;
+      border-radius: 5%;
+      background-color: linen;
+      padding: 1rem;
+
+      // TITLE
+      #title {
+        display: block;
+        color: var(--text-color);
+      }
+
+      // TIMER
+      #timer-panel {
+        height: 350px;
+        flex-direction: column;
+
+        #timer-label {
+          position: relative;
+          top: 80px;
+          color: var(--color-timer);
+          font-size: 1.2rem;
+        }
+
+        #timer {
+          background: linear-gradient(
+            -45deg,
+            var(--background-color1),
+            var(--background-color2)
+          );
+          border-radius: 50%;
+          width: 300px;
+          height: 300px;
+
+          #time-left {
+            font-size: 3rem;
+            color: var(--color-timer);
+          }
+        }
+      }
+
+      // CONTROLS
+      #controls {
+        position: relative;
+        top: -80px;
+
+        #start_stop_panel,
+        #reset_panel {
+          display: inline-block;
+        }
+
+        #start_stop,
+        #reset {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          border: none;
+          margin: 0 0.5rem;
+          color: var(--text-color);
+          background-color: var(--color-timer);
+          box-shadow: 2px 5px 5px var(--text-color);
+        }
+      }
+
+      // SETTINGS
+      #settings {
+        display: block;
+
+        .break,
+        .session {
+          display: inline-block;
+          margin: 0 1rem;
+
+          #break-label,
+          #session-label {
+            font-size: 1rem;
+            text-align: center;
+            padding: 0.5rem 0;
+            color: var(--text-color);
+          }
+
+          #break-length,
+          #session-length {
+            font-size: 1.5rem;
+            width: 75px;
+            color: var(--text-color);
+          }
+
+          #session-increment,
+          #session-decrement,
+          #break-increment,
+          #break-decrement {
+            border-radius: 50%;
+            border: none;
+            color: var(--text-color);
+            background-color: var(--color-timer);
+            box-shadow: 2px 5px 5px var(--text-color);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-height: 650px), screen and (max-width: 1025px) {
+    #root {
+      transform: scale(0.6);
+    }
+  }
+}
