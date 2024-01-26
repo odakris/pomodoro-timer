@@ -1,10 +1,6 @@
 import React from "react";
 import { actionTypes } from "../../reducer";
 import { useStateValue } from "../../contexts/stateProvider";
-// import {
-//   FaAngleDown,
-//   FaAngleUp,
-// } from "https://cdn.skypack.dev/react-icons@4.1.0/fa";
 import { FaAngleDown } from "react-icons/fa";
 import { FaAngleUp } from "react-icons/fa";
 

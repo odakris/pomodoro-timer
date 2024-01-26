@@ -1,11 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useStateValue } from "../../contexts/stateProvider";
 import { actionTypes } from "../../reducer";
-// import {
-//   FaRedo,
-//   FaPlay,
-//   FaPause,
-// } from "https://cdn.skypack.dev/react-icons@4.1.0/fa";
 import { FaRedo } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
